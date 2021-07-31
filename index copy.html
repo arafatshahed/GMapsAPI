@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ2_Oek32X2UHgmv3LAZe2zwC28E2obpA&sensor=false">
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="map-box">
+        <div id="map-button">
+          <button id="locationbt" onclick="loadmyscript()">Let my friends know my location</button>
+        </div>
+        <!--<p id="demo">MAP</p>-->
+        <div id="map" style="display: none;"></div>
+      </div>
+    <script>
+        function loadmyscript() {
+          var s = document.createElement("script");
+          document.getElementById("locationbt").style.display = "none";
+          document.getElementById("map-button").style.height = "unset";
+          document.getElementById("map").style.display = "block";
+          //console.log("did");
+          s.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ2_Oek32X2UHgmv3LAZe2zwC28E2obpA&callback=initMap";
+          document.body.appendChild(s);
+          document.getElementById("nearbtn").style.display = "block";
+          //document.forms['nearbyform'].submit();
+        }
+      </script>
+    <script>
+        // Note: This example requires that you consent to location sharing when
+        // prompted by your browser. If you see the error "The Geolocation service
+        // failed.", it means you probably did not give permission for the browser to
+        // locate you.
+        var map, infoWindow;
+        function initMap() {
+          //document.getElementById("map").style.display = "block";
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 23.8103, lng: 90.4125 },
+            zoom: 16
+          });
+          infoWindow = new google.maps.InfoWindow();
+    
+          // Try HTML5 geolocation.
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+              var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+    
+              map.setCenter(pos);
+              document.getElementById("userlon").value = pos.lng;
+              document.getElementById("userlat").value = pos.lat;
+              console.log(document.getElementById("userlat").value);
+              console.log(document.getElementById("userlon").value);
+              var marker = new google.maps.Marker({
+                position: {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude
+                },
+                map: map,
+                icon: 'static/doggo.gif'
+              });
+              infoWindow.setPosition(pos);
+              var myJavaScriptVariable = "{{ user.username }}";
+              infoWindow.setContent(myJavaScriptVariable);
+              infoWindow.open(map, marker);
+              marker.setMap(map);
+              //infoWindow.setContent('You?.');
+              //infoWindow.open(map);
+              //map.setCenter(pos);
+            }, function () {
+              handleLocationError(true, infoWindow, map.getCenter());
+            });
+          } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+          }
+        }
+    
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+          infoWindow.setPosition(pos);
+          infoWindow.setContent(browserHasGeolocation ?
+            'Error: The Geolocation service failed.' :
+            'Error: Your browser doesn\'t support geolocation.');
+          infoWindow.open(map);
+        }
+      </script>
+</body>
+</html>

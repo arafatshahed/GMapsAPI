@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #2f3136;
+}
+.container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding-top: 0.8rem;
+    height: 97vh;
+}
+.address{
+    width: 97%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.address input{
+    width: 48%;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+#locfield label{
+    font-size: 1.6rem;
+}
+.address button{
+    font-size: 1.6rem;
+}
+.map-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 60%;
+    height: 400px;
+    padding: 20px;
+    border: 2px solid #40d5e0;
+    background: #24252a;
+    box-sizing: content-box;
+    border-radius: 10px;
+    color: #24252a;
+    box-shadow: 0 0 6px rgb(35 173 255);
+  }
+  #myMap {
+    height: 400px;
+    width: 100%;
+  }
+  #map-button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  #map-button button {
+    background: #40d5e0;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: aliceblue;
+  }
+  #map {
+    height: 100%;
+  }
+  .text{
+    width: 60%;
+    color: aliceblue;
+  }
+  #locbtn{
+    color: aliceblue;
+    background: none;
+    border: none;
+    margin-left: 20px;
+}
+.inpbox{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40vh;
+}
+.inpbox input{
+    border-radius: 2px;
+    margin-top: 1vh;
+    border: 2px solid #40d5e0;
+    box-shadow: 0 0 6px rgb(35 173 255);
+}
+a:link {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:visited {
+  color:aquamarine;
+  text-decoration: none;
+}
+a:hover{
+  color: #40d5e0;
+}
+.home{
+  width: 60%;
+  font-size: 3rem;
+  margin-bottom: 2%;
+}
+
+.Links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 2px;
+  margin-top: 1vh;
+  border: 2px solid #40d5e0;
+  box-shadow: 0 0 6px rgb(35 173 255);
+  height: 95vh;
+}
+.Links a{
+  font-size: 2rem;
+  color: aliceblue;
+  padding-bottom: 1vh;
+}
+a, i{
+  cursor: pointer;
+}
+@media only screen and (max-width: 800px){
+    #map-button {
+  font-size: 1.2rem;
+  } 
+}
+    
+  
