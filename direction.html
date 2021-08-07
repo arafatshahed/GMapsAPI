@@ -16,26 +16,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="home">
-            <a href="index.html"><i class="fas fa-home"></i></a>
-          </div>
-        <div class="text">
-            <h2>Click the button to get direction from your location to this location Using Google Map.</h2>
-        </div>
-        <div class="inpbox">
-            <!-- <input type="number" id="latt" placeholder="Latitude" required>
-            <input type="number" id="longg" placeholder="Longitude" required> -->
-        </div>
-            
-        <div class="map-box">
-        <div id="map-button">
-            <button type="button" id="locationbt" onclick="loadmyscript()">Show direction on map</button>
-        </div>
-            <div id="map" style="display: none;"></div>
+    <div id="particles-js">
+        <div class="container">
+            <div class="home">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+            </div>
+            <div class="text">
+                <h2>Click the button to get direction from your location to this location Using Google Map.</h2>
+            </div>
+            <div class="inpbox">
+                <!-- <input type="number" id="latt" placeholder="Latitude" required>
+                <input type="number" id="longg" placeholder="Longitude" required> -->
+            </div>
+                
+            <div class="map-box">
+            <div id="map-button">
+                <button type="button" id="locationbt" onclick="loadmyscript()">Show direction on map</button>
+            </div>
+                <div id="map" style="display: none;"></div>
+            </div>
         </div>
     </div>
-    
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
     <script>
         function loadmyscript() {
             document.getElementById("locationbt").style.display = "none";

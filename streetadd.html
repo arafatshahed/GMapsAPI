@@ -16,25 +16,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="home">
-            <a href="index.html"><i class="fas fa-home"></i></a>
-          </div>
-        <div class="text">
-            <h2>Click the button to get streeet address your current/any location Using Google Map.</h2>
+    <div id="particles-js"><
+        <div class="container">
+            <div class="home">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+            </div>
+            <div class="text">
+                <h2>Click the button to get streeet address your current/any location Using Google Map.</h2>
+            </div>
+            <div class="map-box">
+            <div id="myMap"></div>
+            </div>
+            <div class="address">
+                <input type="text" name="loc" id="address" placeholder="address"
+                    value="" readonly required />
+                <button type="button" id="locbtn" onclick="loadmyscript()"><i class="fa fa-map-marker"
+                        aria-hidden="true"></i></button>
+                <button type="button" id="locbtn" onclick="copy()"><i class="fas fa-copy"></i></button>
+            </div>
         </div>
-        <div class="map-box">
-        <div id="myMap"></div>
-        </div>
-        <div class="address">
-            <input type="text" name="loc" id="address" placeholder="address"
-                value="" readonly required />
-            <button type="button" id="locbtn" onclick="loadmyscript()"><i class="fa fa-map-marker"
-                    aria-hidden="true"></i></button>
-            <button type="button" id="locbtn" onclick="copy()"><i class="fas fa-copy"></i></button>
         </div>
     </div>
-    
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
     <script>
         function copy() {
             var copyText = document.getElementById("address");
