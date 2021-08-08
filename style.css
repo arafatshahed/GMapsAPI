@@ -73,6 +73,7 @@ body {
   color: aliceblue;
 }
 #particles-js {
+  max-height: 120vh;
   height: 100vh;
 }
 #locbtn {
@@ -107,6 +108,7 @@ a:hover {
   color: #40d5e0;
 }
 .home {
+  margin-top: 1vh;
   width: 60%;
   font-size: 3rem;
   margin-bottom: 2%;
@@ -170,5 +172,8 @@ i {
   .inpbox input {
     
     width: auto;
+  }
+  .Links a {
+    font-size: 1.3rem;
   }
 }
