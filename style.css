@@ -1,98 +1,98 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-color: #2f3136;
+body {
+  background-color: #2f3136;
 }
 .container {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    padding-top: 0.8rem;
-    height: 97vh;
-    flex-direction: column;
-    top: 50%;  /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-top: 0.8rem;
+  height: 97vh;
+  flex-direction: column;
+  top: 50%; /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
 }
-.address{
-    width: 97%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+.address {
+  width: 97%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
-.address input{
-    width: 48%;
-    padding: 10px;
-    font-size: 0.9rem;
+.address input {
+  width: 48%;
+  padding: 10px;
+  font-size: 0.9rem;
 }
-#locfield label{
-    font-size: 1.6rem;
+#locfield label {
+  font-size: 1.6rem;
 }
-.address button{
-    font-size: 1.6rem;
+.address button {
+  font-size: 1.6rem;
 }
 .map-box {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 60%;
-    height: 400px;
-    padding: 20px;
-    border: 2px solid #40d5e0;
-    background: #24252a;
-    box-sizing: content-box;
-    border-radius: 10px;
-    color: #24252a;
-    box-shadow: 0 0 6px rgb(35 173 255);
-  }
-  #myMap {
-    height: 400px;
-    width: 100%;
-  }
-  #map-button {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  #map-button button {
-    background: #40d5e0;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    color: aliceblue;
-  }
-  #map {
-    height: 100%;
-  }
-  .text{
-    width: 60%;
-    color: aliceblue;
-  }
-  #particles-js{
-    height:100vh;
-  }
-  #locbtn{
-    color: aliceblue;
-    background: none;
-    border: none;
-    margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 60%;
+  height: 400px;
+  padding: 20px;
+  border: 2px solid #40d5e0;
+  background: #24252a;
+  box-sizing: content-box;
+  border-radius: 10px;
+  color: #24252a;
+  box-shadow: 0 0 6px rgb(35 173 255);
 }
-.inpbox{
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 40vh;
+#myMap {
+  height: 400px;
+  width: 100%;
 }
-.inpbox input{
-    border-radius: 2px;
-    margin-top: 1vh;
-    border: 2px solid #40d5e0;
-    box-shadow: 0 0 6px rgb(35 173 255);
+#map-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+}
+#map-button button {
+  background: #40d5e0;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: aliceblue;
+}
+#map {
+  height: 100%;
+}
+.text {
+  width: 70%;
+  color: aliceblue;
+}
+#particles-js {
+  height: 100vh;
+}
+#locbtn {
+  color: aliceblue;
+  background: none;
+  border: none;
+  margin-left: 20px;
+}
+.inpbox {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  width: 60vh;
+}
+.inpbox input {
+  border-radius: 2px;
+  margin: 1vh;
+  border: 2px solid #40d5e0;
+  box-shadow: 0 0 6px rgb(35 173 255);
+  width: 25vh;
 }
 a:link {
   text-decoration: none;
@@ -100,19 +100,19 @@ a:link {
 }
 
 a:visited {
-  color:aquamarine;
+  color: aquamarine;
   text-decoration: none;
 }
-a:hover{
+a:hover {
   color: #40d5e0;
 }
-.home{
+.home {
   width: 60%;
   font-size: 3rem;
   margin-bottom: 2%;
 }
 
-.Links{
+.Links {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,28 +122,53 @@ a:hover{
   border: 2px solid #40d5e0;
   box-shadow: 0 0 6px rgb(35 173 255);
   width: max-content;
-  background-color:#24252a;
+  background-color: #24252a;
   opacity: 0.7;
   backdrop-filter: blur(15px);
   border-radius: 10px;
   padding: 10vh;
 }
-.Links a{
+.Links a {
   font-size: 1.5rem;
-  color:white;
+  color: white;
   padding-bottom: 1vh;
 }
-.Links a:hover,i{
-  color:#40d5e0;
+.Links a:hover,
+i {
+  color: #40d5e0;
   padding-bottom: 1vh;
 }
-a, i{
+a,
+i {
   cursor: pointer;
 }
-@media only screen and (max-width: 800px){
-    #map-button {
-  font-size: 1.2rem;
-  } 
-}
+@media only screen and (max-width: 800px) {
+  #map-button {
+    font-size: 1.2rem;
+  }
+  .home {
+    float: left;
+    width: 90%;
+  }
+  .inpbox {
+    flex-direction: column;
+    width:40vh;
+  }
+  .map-box {
+    width: 90%;
+  }
+  .Links{
+    padding-left:1vh;
+    padding-right:1vh;
+  }
+  .container{
+    width: 80%;
+  }
+  .text{
+    width:100%;
+  }
+  .inpbox input {
     
-  
+    width: auto;
+  }
+}
